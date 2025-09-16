@@ -9,73 +9,37 @@
     <style>
         /* Custom animations */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
-        .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-        .animate-slideIn {
-            animation: slideIn 0.6s ease-out forwards;
-        }
+        .animate-fadeInUp { animation: fadeInUp 0.6s ease-out forwards; }
+        .animate-slideIn { animation: slideIn 0.6s ease-out forwards; }
         .animate-delay-100 { animation-delay: 0.1s; }
         .animate-delay-200 { animation-delay: 0.2s; }
         .animate-delay-300 { animation-delay: 0.3s; }
         .animate-delay-400 { animation-delay: 0.4s; }
 
         /* Hover effect for cards */
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
+        .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
 
         /* Link styles */
-        a {
-            color: #2563eb; /* Tailwind blue-600 */
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        a:hover {
-            color: #1e40af; /* Tailwind blue-800 */
-            text-decoration: underline;
-        }
+        a { color: #2563eb; /* Tailwind blue-600 */ text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: #1e40af; /* Tailwind blue-800 */ text-decoration: underline; }
 
         /* Education item spacing */
-        .education-item {
-            margin-bottom: 0.75rem;
-        }
-        .education-item:last-child {
-            margin-bottom: 0;
-        }
+        .education-item { margin-bottom: 0.75rem; }
+        .education-item:last-child { margin-bottom: 0; }
 
         /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         /* Mobile menu styles */
-        #menu-toggle:checked ~ #menu {
-            display: block;
-        }
+        #menu-toggle:checked ~ #menu { display: block; }
     </style>
 </head>
 <body class="bg-gray-50 font-['Inter'] text-gray-800 leading-relaxed">
@@ -96,6 +60,7 @@
                         <a href="#skills" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Skills</a>
                         <a href="#experience" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Experience</a>
                         <a href="#projects" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Projects</a>
+                        <a href="#publications" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Publications</a>
                         <a href="#education" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Education</a>
                         <a href="#achievements" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Achievements</a>
                     </div>
@@ -104,7 +69,8 @@
                     <a href="#about" class="hover:text-blue-600 transition-colors text-sm lg:text-base">About</a>
                     <a href="#skills" class="hover:text-blue-600 transition-colors text-sm lg:text-base">Skills</a>
                     <a href="#experience" class="hover:text-blue-600 transition-colors text-sm lg:text-base">Experience</a>
-                    <a href="#projects" class=" pux-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Projects</a>
+                    <a href="#projects" class="hover:text-blue-600 transition-colors text-sm lg:text-base">Projects</a>
+                    <a href="#publications" class="hover:text-blue-600 transition-colors text-sm lg:text-base">Publications</a>
                     <a href="#education" class="hover:text-blue-600 transition-colors text-sm lg:text-base">Education</a>
                     <a href="#achievements" class="hover:text-blue-600 transition-colors text-sm lg:text-base">Achievements</a>
                 </div>
@@ -135,7 +101,7 @@
             <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg card">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 border-b-2 border-blue-200 pb-3 mb-6">Professional Summary</h2>
                 <p class="text-gray-700 text-base sm:text-lg">
-                    Data Science student and Full-Stack Developer with expertise in machine learning, natural language processing (NLP), and data analytics. Skilled in Python, TensorFlow, and Flask, with experience building AI-powered applications for business insights and end-to-end solutions from data preprocessing to model deployment.
+                    Aspiring Software Engineer with strong knowledge in Python, C, C++ specializing in Machine Learning, Natural Language Processing (NLP), and Data Science. Experienced in developing and deploying full-stack web applications using Flask and FastAPI, with expertise in databases including MongoDB and MySQL (RDBMS). Skilled in building AI-powered solutions for sentiment analysis, summarization, information extraction, and data visualization. Adept at designing scalable systems, integrating APIs, and applying data-driven approaches to solve real-world problems.
                 </p>
             </div>
         </section>
@@ -147,31 +113,19 @@
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 text-gray-700 text-base sm:text-lg">
                     <div>
                         <p class="font-semibold">Programming Languages:</p>
-                        <p>Python, C, C++, Java</p>
+                        <p>Python, C, C++</p>
                     </div>
                     <div>
-                        <p class="font-semibold">Machine Learning & Deep Learning:</p>
-                        <p>Scikit-Learn, XGBoost, TensorFlow, PyTorch, Transformers (BERT, T5, Qwen 2.5B), ClinicalBERT, RAG</p>
+                        <p class="font-semibold">AI & Deep Learning:</p>
+                        <p>Transformers (BERT, T5), Whisper, Generative AI, NLP (NER, Sentiment Analysis, Summarization), Chatbot Development</p>
                     </div>
                     <div>
-                        <p class="font-semibold">NLP & Computer Vision Libraries:</p>
-                        <p>NLTK, TextBlob, torchvision</p>
+                        <p class="font-semibold">Web & Databases:</p>
+                        <p>Flask, FastAPI, MongoDB, MySQL, SQLAlchemy</p>
                     </div>
                     <div>
-                        <p class="font-semibold">Databases & Big Data:</p>
-                        <p>MongoDB, MySQL, SQLAlchemy</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold">Web Development:</p>
-                        <p>Flask, FastAPI, Django</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold">Deployment & Tools:</p>
-                        <p>Render, ngrok, Google Colab, Git</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold">Data Analysis & Visualization:</p>
-                        <p>Pandas, NumPy, Matplotlib, Seaborn</p>
+                        <p class="font-semibold">Development Tools:</p>
+                        <p>Git, Google Colab, Pandas, NumPy</p>
                     </div>
                 </div>
             </div>
@@ -211,6 +165,7 @@
                             Technologies Used: Python, FastAPI, Gemini API, SQLAlchemy, Pandas, NumPy, Render
                         </p>
                     </div>
+
                     <!-- ArogyaAI -->
                     <div class="bg-gray-50 p-5 sm:p-6 rounded-lg card animate-slideIn animate-delay-100">
                         <h3 class="text-lg sm:text-xl font-semibold text-gray-800">ArogyaAI - Healthcare AI Platform</h3>
@@ -227,7 +182,11 @@
                             <li>Platform utilized by two clinics for real-world application.</li>
                             <li>Hosted LLM on Google Colab via ngrok; deployed web platform on Render.</li>
                         </ul>
+                        <p class="mt-3 text-xs sm:text-sm text-gray-600">
+                            <strong>Technologies Used:</strong> Python, FastAPI, MongoDB, Whisper, LLM, ngrok, Google Colab
+                        </p>
                     </div>
+
                     <!-- Auditorium Booking System -->
                     <div class="bg-gray-50 p-5 sm:p-6 rounded-lg card animate-slideIn animate-delay-200">
                         <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Auditorium Booking System</h3>
@@ -239,7 +198,11 @@
                             <li>Implemented authentication and real-time availability, reducing booking conflicts by 30%.</li>
                             <li>Actively used by real users in the university to utilize the auditorium.</li>
                         </ul>
+                        <p class="mt-3 text-xs sm:text-sm text-gray-600">
+                            <strong>Technologies Used:</strong> Python, Flask, SQL (TiDB Cloud), Render
+                        </p>
                     </div>
+
                     <!-- Retinopathy Detection -->
                     <div class="bg-gray-50 p-5 sm:p-6 rounded-lg card animate-slideIn animate-delay-300">
                         <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Retinopathy Detection</h3>
@@ -254,6 +217,7 @@
                             Technologies Used: Python, Flask, PyTorch, torchvision, Pillow, HTML5, CSS3.
                         </p>
                     </div>
+
                     <!-- Renewable Energy Prediction -->
                     <div class="bg-gray-50 p-5 sm:p-6 rounded-lg card animate-slideIn animate-delay-400">
                         <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Renewable Energy Prediction</h3>
@@ -272,10 +236,24 @@
             </div>
         </section>
 
+        <!-- Research & Publications -->
+        <section id="publications" class="mb-12 animate-fadeInUp">
+            <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg card">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 border-b-2 border-blue-200 pb-3 mb-6">Research & Publications</h2>
+                <ul class="list-disc ml-6 text-gray-700 text-base sm:text-lg">
+                    <li>
+                        <strong>Arogya-AI: AI Driven Healthcare Platform for Travel Doctors — Survey</strong><br>
+                        Accepted at <em>International Journal of Creative Research Thoughts (IJCRT)</em> — Publication in progress<br>
+                        <a href="https://ijcrt.org/AD.php?r_id=289998" target="_blank" class="text-blue-600 hover:underline">View Status (IJCRT_289998)</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Education -->
         <section id="education" class="mb-12 animate-fadeInUp">
             <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg card">
-                <ABCDEFGHIJKLMN class="text-2xl sm:text-3xl font-bold text-gray-900 border-b-2 border-blue-200 pb-3 mb-6">Education</h2>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 border-b-2 border-blue-200 pb-3 mb-6">Education</h2>
                 <ul class="list-none text-gray-700 text-base sm:text-lg">
                     <li class="education-item"><strong class="font-semibold">SJB Institute of Technology</strong>, B.E. in Computer Science and Data Science (2022–2026), CGPA: 8.15/10</li>
                     <li class="education-item"><strong class="font-semibold">Sri Chaitanya PU College</strong>, Pre-University Course (PUC), Karnataka (2020–2022), Percentage: 89%</li>
